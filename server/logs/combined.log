@@ -1,0 +1,138 @@
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:40:24"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:40:25"}
+{"level":"info","message":"::1 - - [07/May/2025:03:41:15 +0000] \"POST /api/auth/login HTTP/1.1\" 500 26 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:41:15"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:41:30"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:41:31"}
+{"level":"info","message":"::1 - - [07/May/2025:03:41:38 +0000] \"POST /api/auth/login HTTP/1.1\" 500 26 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:41:38"}
+{"level":"info","message":"::1 - - [07/May/2025:03:41:42 +0000] \"POST /api/user/register HTTP/1.1\" 404 157 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:41:42"}
+{"level":"info","message":"::1 - - [07/May/2025:03:43:07 +0000] \"GET /api/auth/me HTTP/1.1\" 401 52 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:43:07"}
+{"level":"info","message":"::1 - - [07/May/2025:03:43:07 +0000] \"GET /api/auth/me HTTP/1.1\" 401 52 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:43:07"}
+{"level":"info","message":"::1 - - [07/May/2025:03:43:17 +0000] \"POST /api/user/register HTTP/1.1\" 404 157 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:43:17"}
+{"level":"info","message":"::1 - - [07/May/2025:03:43:29 +0000] \"POST /api/user/register HTTP/1.1\" 404 157 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:43:29"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:44:29"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:44:30"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:44:47"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:44:47"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:45:00"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:45:01"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:45:26"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:45:27"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:45:28"}
+{"level":"info","message":"Attempting to register new user: aaaa","timestamp":"2025-05-07 15:45:33"}
+{"level":"info","message":"Successfully registered new user: aaaa","timestamp":"2025-05-07 15:45:33"}
+{"level":"info","message":"::1 - - [07/May/2025:03:45:33 +0000] \"POST /api/user/register HTTP/1.1\" 201 42 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:45:33"}
+{"level":"info","message":"::1 - - [07/May/2025:03:45:33 +0000] \"POST /api/auth/login HTTP/1.1\" 500 26 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:45:33"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:46:33"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:46:33"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:46:51"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:46:52"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:47:00"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:47:00"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:47:05"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:47:05"}
+{"level":"info","message":"::1 - - [07/May/2025:03:56:55 +0000] \"POST /api/auth/login HTTP/1.1\" 404 154 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0\"","timestamp":"2025-05-07 15:56:55"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:57:36"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:57:37"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:57:39"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:57:40"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:57:53"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:57:53"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:58:25"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:58:26"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 15:58:28"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 15:58:29"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:00:14"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:00:15"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:00:19"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:00:20"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:00:21"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:00:22"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:00:24"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:00:25"}
+{"level":"info","message":"::1 - POST /api/auth/login 404 1.555 ms - 154","timestamp":"2025-05-07 16:00:30"}
+{"level":"info","message":"::1 - POST /api/auth/login 404 0.270 ms - 154","timestamp":"2025-05-07 16:00:44"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:01:15"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:01:17"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:01:17"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:01:20"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:01:21"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:01:25"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:01:25"}
+{"ip":"::1","level":"info","message":"Login attempt","timestamp":"2025-05-07 16:01:31","username":"aaaa"}
+{"error":"User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number","ip":"::1","level":"error","message":"Login error","stack":"ValidationError: User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number\n    at Document.invalidate (E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2025-05-07 16:01:31"}
+{"level":"info","message":"::1 - POST /api/auth/login 500 176.334 ms - 26","timestamp":"2025-05-07 16:01:31"}
+{"level":"info","message":"::1 - POST /api/user/register 404 0.646 ms - 157","timestamp":"2025-05-07 16:01:39"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:05:51"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:05:52"}
+{"level":"info","message":"::1 - GET /api/auth/me 401 3.707 ms - 52","timestamp":"2025-05-07 16:05:58"}
+{"level":"info","message":"::1 - GET /api/auth/me 401 0.557 ms - 52","timestamp":"2025-05-07 16:05:58"}
+{"ip":"::1","level":"info","message":"Registration attempt","timestamp":"2025-05-07 16:06:07","username":"bbb"}
+{"ip":"::1","level":"info","message":"User registration successful","timestamp":"2025-05-07 16:06:07","userId":"681adc2fb4c7f9722321ce38","username":"bbb"}
+{"level":"info","message":"::1 - POST /api/auth/register 201 168.493 ms - 37","timestamp":"2025-05-07 16:06:07"}
+{"ip":"::1","level":"info","message":"Login attempt","timestamp":"2025-05-07 16:06:07","username":"bbb"}
+{"error":"User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number","ip":"::1","level":"error","message":"Login error","stack":"ValidationError: User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number\n    at Document.invalidate (E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2025-05-07 16:06:08"}
+{"level":"info","message":"::1 - POST /api/auth/login 500 123.429 ms - 26","timestamp":"2025-05-07 16:06:08"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:08:53"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:08:54"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:09:04"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:09:05"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:09:26"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:09:27"}
+{"ip":"::1","level":"info","message":"Login attempt","password":"BBbbb111","timestamp":"2025-05-07 16:09:36","username":"bbb"}
+{"error":"User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number","ip":"::1","level":"error","message":"Login error","stack":"ValidationError: User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number\n    at Document.invalidate (E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2025-05-07 16:09:37"}
+{"level":"info","message":"::1 - POST /api/auth/login 500 178.419 ms - 26","timestamp":"2025-05-07 16:09:37"}
+{"ip":"::1","level":"info","message":"Registration attempt","timestamp":"2025-05-07 16:10:55","username":"bbb"}
+{"ip":"::1","level":"warn","message":"Registration failed: Username already exists","timestamp":"2025-05-07 16:10:55","username":"bbb"}
+{"level":"info","message":"::1 - POST /api/auth/register 400 42.121 ms - 37","timestamp":"2025-05-07 16:10:55"}
+{"ip":"::1","level":"info","message":"Login attempt","password":"CCcc11","timestamp":"2025-05-07 16:11:06","username":"ccc"}
+{"ip":"::1","level":"warn","message":"Login failed: User not found","timestamp":"2025-05-07 16:11:06","username":"ccc"}
+{"level":"info","message":"::1 - POST /api/auth/login 401 43.093 ms - 42","timestamp":"2025-05-07 16:11:06"}
+{"ip":"::1","level":"info","message":"Registration attempt","timestamp":"2025-05-07 16:11:15","username":"ccc"}
+{"ip":"::1","level":"info","message":"User registration successful","timestamp":"2025-05-07 16:11:15","userId":"681add632b95ee1da002ddd4","username":"ccc"}
+{"level":"info","message":"::1 - POST /api/auth/register 201 291.980 ms - 37","timestamp":"2025-05-07 16:11:15"}
+{"ip":"::1","level":"info","message":"Login attempt","password":"CCcc11","timestamp":"2025-05-07 16:11:15","username":"ccc"}
+{"error":"User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number","ip":"::1","level":"error","message":"Login error","stack":"ValidationError: User validation failed: password: Password must contain at least one uppercase letter, one lowercase letter, and one number\n    at Document.invalidate (E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3219:32)\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\document.js:3012:17\n    at E:\\map-demo\\server\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","timestamp":"2025-05-07 16:11:15"}
+{"level":"info","message":"::1 - POST /api/auth/login 500 123.504 ms - 26","timestamp":"2025-05-07 16:11:15"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:11:49"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:11:50"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:12:00"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:12:01"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:12:02"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:12:03"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:12:06"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:12:06"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-07 16:12:37"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-05-07 16:12:38"}
+{"ip":"::1","level":"info","message":"Login attempt","timestamp":"2025-05-07 16:12:41","username":"ccc"}
+{"ip":"::1","level":"info","message":"Login successful","timestamp":"2025-05-07 16:12:42","userId":"681add632b95ee1da002ddd4","username":"ccc"}
+{"level":"info","message":"::1 - POST /api/auth/login 200 181.078 ms - 263","timestamp":"2025-05-07 16:12:42"}
+{"ip":"::1","level":"info","message":"Logout attempt","timestamp":"2025-05-07 16:13:19","userId":"681add632b95ee1da002ddd4"}
+{"ip":"::1","level":"info","message":"Logout successful","timestamp":"2025-05-07 16:13:19","userId":"681add632b95ee1da002ddd4"}
+{"level":"info","message":"::1 - POST /api/auth/logout 200 2.064 ms - 31","timestamp":"2025-05-07 16:13:19"}
+{"ip":"::1","level":"info","message":"Login attempt","timestamp":"2025-05-07 16:13:31","username":"aaa"}
+{"ip":"::1","level":"warn","message":"Login failed: User not found","timestamp":"2025-05-07 16:13:31","username":"aaa"}
+{"level":"info","message":"::1 - POST /api/auth/login 401 72.329 ms - 42","timestamp":"2025-05-07 16:13:31"}
+{"ip":"::1","level":"info","message":"Registration attempt","timestamp":"2025-05-07 16:13:47","username":"test"}
+{"ip":"::1","level":"info","message":"User registration successful","timestamp":"2025-05-07 16:13:47","userId":"681addfb086f583d93d98d27","username":"test"}
+{"level":"info","message":"::1 - POST /api/auth/register 201 175.355 ms - 37","timestamp":"2025-05-07 16:13:47"}
+{"ip":"::1","level":"info","message":"Login attempt","timestamp":"2025-05-07 16:13:47","username":"test"}
+{"ip":"::1","level":"info","message":"Login successful","timestamp":"2025-05-07 16:13:47","userId":"681addfb086f583d93d98d27","username":"test"}
+{"level":"info","message":"::1 - POST /api/auth/login 200 172.746 ms - 266","timestamp":"2025-05-07 16:13:47"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:23:32","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:23:32","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 200 57.998 ms - 138","timestamp":"2025-05-07 16:23:32"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:23:32","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:23:32","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 304 60.072 ms - -","timestamp":"2025-05-07 16:23:32"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:25:02","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:25:02","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 304 61.130 ms - -","timestamp":"2025-05-07 16:25:02"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:25:02","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:25:02","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 304 120.459 ms - -","timestamp":"2025-05-07 16:25:02"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:26:04","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:26:04","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 304 48.930 ms - -","timestamp":"2025-05-07 16:26:04"}
+{"ip":"::1","level":"info","message":"User info request","timestamp":"2025-05-07 16:26:04","userId":"681addfb086f583d93d98d27"}
+{"ip":"::1","level":"info","message":"User info retrieved successfully","timestamp":"2025-05-07 16:26:04","userId":"681addfb086f583d93d98d27"}
+{"level":"info","message":"::1 - GET /api/auth/me 304 54.412 ms - -","timestamp":"2025-05-07 16:26:04"}
