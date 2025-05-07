@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
     Container,
     Paper,
@@ -25,8 +25,18 @@ const Login = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [toast, setToast] = useState({ open: false, message: '', severity: 'success' });
-    const { login } = useAuth();
+    const { login, user } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // if the user is already logged in, redirect to the map page
+    useEffect(() => {
+        if (user) {
+            // if there is a original request path, redirect to the path after login
+            const from = location.state?.from || '/map';
+            navigate(from);
+        }
+    }, [user, navigate, location]);
 
     // Password validation regex
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
@@ -71,7 +81,6 @@ const Login = () => {
                     message: 'Login successfully',
                     severity: 'success'
                 });
-                setTimeout(() => navigate('/map'), 1000);
             } else {
                 setError(result.message);
             }
@@ -179,17 +188,19 @@ const Login = () => {
                             disabled={isLoading}
                             helperText="Password must contain at least one uppercase letter, one lowercase letter, and one number"
                             slotProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            aria-label="toggle password visibility"
-                                            onClick={handleClickShowPassword}
-                                            edge="end"
-                                        >
-                                            {showPassword ? <VisibilityOff /> : <Visibility />}
-                                        </IconButton>
-                                    </InputAdornment>
-                                ),
+                                input: {
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                aria-label="toggle password visibility"
+                                                onClick={handleClickShowPassword}
+                                                edge="end"
+                                            >
+                                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                },
                             }}
                         />
                         <Button

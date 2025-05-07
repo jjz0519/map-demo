@@ -33,7 +33,11 @@ router.post('/', auth, async (req, res) => {
             userId: req.user.id 
         });
 
-        res.status(201).json(newLocation);
+        // populate the createdBy field
+        const populatedLocation = await Location.findById(newLocation._id)
+            .populate('createdBy', 'username');
+
+        res.status(201).json(populatedLocation);
     } catch (error) {
         logger.error('Error creating location', { 
             error: error.message,
@@ -90,7 +94,7 @@ router.delete('/:id', auth, async (req, res) => {
             return res.status(403).json({ message: 'Not authorized to delete this location' });
         }
 
-        await location.remove();
+        await Location.deleteOne({ _id: req.params.id });
         logger.info('Location deleted', { 
             locationId: req.params.id,
             userId: req.user.id 

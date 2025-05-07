@@ -10,6 +10,24 @@ const api = axios.create({
     }
 });
 
+// Add interceptor to handle session timeout
+api.interceptors.response.use(
+    response => response,
+    error => {
+        if (error.response && error.response.status === 401) {
+            // check if the current page is the login page to 
+            // avoid redirecting to login page when the user is already logged in
+            const isLoginPage = window.location.pathname === '/login';
+            if (!isLoginPage) {
+                // Clear local state and redirect to log in
+                localStorage.removeItem('user');
+                window.location.href = '/login';
+            }
+        }
+        return Promise.reject(error);
+    }
+);
+
 export const authService = {
     login: async (username, password) => {
         try {

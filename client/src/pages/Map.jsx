@@ -34,6 +34,15 @@ const defaultCenter = {
 
 const libraries = ['marker'];
 
+// Map options for better user experience
+const mapOptions = {
+    disableDefaultUI: false,
+    zoomControl: true,
+    mapTypeControl: true,
+    streetViewControl: false,
+    fullscreenControl: true
+};
+
 const Map = () => {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
@@ -73,11 +82,18 @@ const Map = () => {
                     console.error('Error getting location:', error);
                     setToast({
                         open: true,
-                        message: 'Failed to get your location, using default position',
-                        severity: 'warning'
+                        message: `Failed to get your location: ${error.message}`,
+                        severity: 'error'
                     });
-                }
+                },
+                { timeout: 10000, enableHighAccuracy: true }
             );
+        } else {
+            setToast({
+                open: true,
+                message: 'Geolocation is not supported by your browser',
+                severity: 'error'
+            });
         }
     }, []);
 
@@ -100,8 +116,20 @@ const Map = () => {
         try {
             const data = await locationService.getLocations();
             setLocations(data);
+            if (data.length === 0) {
+                setToast({
+                    open: true,
+                    message: 'No location markers found. Click on the map to add some!',
+                    severity: 'info'
+                });
+            }
         } catch (error) {
             console.error('Error fetching locations:', error);
+            setToast({
+                open: true,
+                message: 'Failed to fetch locations. Please try again.',
+                severity: 'error'
+            });
         } finally {
             setIsLoading(false);
         }
@@ -122,6 +150,17 @@ const Map = () => {
 
     const handleLocationCreated = (newLocation) => {
         setLocations(prev => [...prev, newLocation]);
+        setSelectedLocation(newLocation);
+        
+        // Pan to the new location
+        if (map) {
+            map.panTo({
+                lat: newLocation.location.coordinates[1],
+                lng: newLocation.location.coordinates[0]
+            });
+            map.setZoom(15); // Zoom in a bit to see the new location better
+        }
+        
         setToast({
             open: true,
             message: 'Location marker added',
@@ -156,12 +195,20 @@ const Map = () => {
         return (
             <Box sx={{ 
                 display: 'flex', 
+                flexDirection: 'column',
                 justifyContent: 'center', 
                 alignItems: 'center', 
                 height: '100vh',
-                backgroundColor: 'rgba(0, 0, 0, 0.5)'
+                padding: 3,
+                backgroundColor: 'rgba(0, 0, 0, 0.1)'
             }}>
-                <CircularProgress size={60} />
+                <CircularProgress size={60} sx={{ mb: 2 }} />
+                <Typography variant="h6" align="center">
+                    Loading Google Maps...
+                </Typography>
+                <Typography variant="body2" align="center" color="text.secondary" sx={{ mt: 1 }}>
+                    If this takes too long, please check your API key or internet connection.
+                </Typography>
             </Box>
         );
     }
@@ -196,7 +243,7 @@ const Map = () => {
                     onLoad={onLoad}
                     onUnmount={onUnmount}
                     onClick={handleMapClick}
-                    mapId={process.env.REACT_APP_GOOGLE_MAPS_MAP_ID}
+                    options={mapOptions}
                 >
                     {locations.map(location => (
                         <LocationMarker
@@ -212,7 +259,13 @@ const Map = () => {
 
                 <Fab
                     color="primary"
-                    sx={{ position: 'absolute', top: 66, left: 16 }}
+                    aria-label="search locations"
+                    sx={{ 
+                        position: 'absolute', 
+                        top: { xs: 16, sm: 90 },
+                        left: 16,
+                        zIndex: 1 
+                    }}
                     onClick={() => setSearchOpen(!searchOpen)}
                 >
                     <SearchIcon />

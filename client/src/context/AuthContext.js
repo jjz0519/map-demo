@@ -6,14 +6,26 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [authChecked, setAuthChecked] = useState(false);
 
     useEffect(() => {
-        // Check if user is logged in on mount
-        checkAuth();
-    }, []);
+        // Check if user is logged in on mount, but only once
+        if (!authChecked) {
+            checkAuth();
+            setAuthChecked(true);
+        }
+    }, [authChecked]);
 
     const checkAuth = async () => {
         try {
+            // avoid executing getCurrentUser when the current page is the login page
+            const isLoginPage = window.location.pathname === '/login';
+            if (isLoginPage) {
+                setUser(null);
+                setLoading(false);
+                return;
+            }
+            
             const userData = await authService.getCurrentUser();
             setUser(userData);
         } catch (error) {

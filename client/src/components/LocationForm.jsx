@@ -40,8 +40,23 @@ const LocationForm = ({ open, onClose, position, onLocationCreated }) => {
         e.preventDefault();
         setError('');
 
-        if (!formData.title || !formData.rating) {
-            setError('Title and rating are required');
+        if (!formData.title.trim()) {
+            setError('Please enter a title');
+            return;
+        }
+
+        if (formData.title.trim().length < 3) {
+            setError('Title must be at least 3 characters long');
+            return;
+        }
+
+        if (!formData.rating) {
+            setError('Please select a rating');
+            return;
+        }
+
+        if (formData.price && (isNaN(formData.price) || Number(formData.price) < 0)) {
+            setError('Price must be a positive number');
             return;
         }
 
@@ -84,6 +99,9 @@ const LocationForm = ({ open, onClose, position, onLocationCreated }) => {
                         onChange={handleChange}
                         required
                         margin="normal"
+                        error={error && error.includes('title')}
+                        helperText="Title must be at least 3 characters"
+                        slotProps={{ htmlInput: { maxLength: 50 }}}
                     />
                     <TextField
                         fullWidth
@@ -112,7 +130,13 @@ const LocationForm = ({ open, onClose, position, onLocationCreated }) => {
                         value={formData.price}
                         onChange={handleChange}
                         margin="normal"
-                        slotProps={{ input: { min: 0 } }}
+                        error={error && error.includes('price')}
+                        helperText="Optional - enter a positive number"
+                        slotProps={{ htmlInput : {
+                            startAdornment: <span style={{ marginRight: '8px' }}>$</span>,
+                            min: 0,
+                            step: 0.01}
+                        }}
                     />
                 </DialogContent>
                 <DialogActions>

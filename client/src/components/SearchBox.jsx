@@ -45,7 +45,7 @@ const SearchBox = ({ locations, onLocationSelect }) => {
             elevation={3}
             sx={{
                 position: 'absolute',
-                top: 70,
+                top: 80,
                 left: 90,
                 width: 300,
                 maxHeight: 400,
