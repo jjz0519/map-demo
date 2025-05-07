@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const api = axios.create({
     baseURL: API_URL,
@@ -44,6 +44,35 @@ export const authService = {
             return response.data;
         } catch (error) {
             throw error.response?.data || { message: 'Failed to get user info' };
+        }
+    }
+};
+
+export const locationService = {
+    createLocation: async (locationData) => {
+        try {
+            const response = await api.post('/locations', locationData);
+            return response.data;
+        } catch (error) {
+            throw error.response?.data || { message: 'Failed to create location' };
+        }
+    },
+
+    getLocations: async () => {
+        try {
+            const response = await api.get('/locations');
+            return response.data;
+        } catch (error) {
+            throw error.response?.data || { message: 'Failed to fetch locations' };
+        }
+    },
+
+    deleteLocation: async (id) => {
+        try {
+            const response = await api.delete(`/locations/${id}`);
+            return response.data;
+        } catch (error) {
+            throw error.response?.data || { message: 'Failed to delete location' };
         }
     }
 };

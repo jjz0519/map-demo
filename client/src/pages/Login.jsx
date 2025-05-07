@@ -16,6 +16,7 @@ import {
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 import { authService } from '../services/api';
+import Toast from '../components/Toast';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -23,6 +24,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const [toast, setToast] = useState({ open: false, message: '', severity: 'success' });
     const { login } = useAuth();
     const navigate = useNavigate();
 
@@ -64,7 +66,12 @@ const Login = () => {
         try {
             const result = await login(username, password);
             if (result.success) {
-                navigate('/map');
+                setToast({
+                    open: true,
+                    message: 'Login successfully',
+                    severity: 'success'
+                });
+                setTimeout(() => navigate('/map'), 1000);
             } else {
                 setError(result.message);
             }
@@ -82,10 +89,15 @@ const Login = () => {
         setIsLoading(true);
         try {
             await authService.register(username, password);
+            setToast({
+                open: true,
+                message: 'Registration successful, logging in...',
+                severity: 'success'
+            });
             // Automatically log in after successful registration
             const loginResult = await login(username, password);
             if (loginResult.success) {
-                navigate('/map');
+                setTimeout(() => navigate('/map'), 1000);
             } else {
                 setError(loginResult.message);
             }
@@ -100,8 +112,18 @@ const Login = () => {
         setShowPassword(!showPassword);
     };
 
+    const handleToastClose = () => {
+        setToast(prev => ({ ...prev, open: false }));
+    };
+
     return (
         <Container component="main" maxWidth="xs">
+            <Toast
+                open={toast.open}
+                message={toast.message}
+                severity={toast.severity}
+                onClose={handleToastClose}
+            />
             <Box
                 sx={{
                     marginTop: 8,
@@ -156,7 +178,7 @@ const Login = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             disabled={isLoading}
                             helperText="Password must contain at least one uppercase letter, one lowercase letter, and one number"
-                            InputProps={{
+                            slotProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
                                         <IconButton
