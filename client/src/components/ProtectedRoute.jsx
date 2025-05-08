@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
     }
 
     if (!user) {
-        // 将当前路径记录在状态中，以便登录后可以返回
+        // save the path to state to return after logging in
         return <Navigate to="/login" state={{ from: location.pathname }} />;
     }
 
