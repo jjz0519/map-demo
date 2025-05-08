@@ -114,7 +114,7 @@ const LocationForm = ({ open, onClose, position, onLocationCreated }) => {
                         margin="normal"
                     />
                     <Box sx={{ my: 2 }}>
-                        <Typography component="legend">Rating</Typography>
+                        <Typography component="legend">Rating *</Typography>
                         <Rating
                             name="rating"
                             value={formData.rating}

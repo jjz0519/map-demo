@@ -148,10 +148,11 @@ const Map = () => {
         setFormOpen(true);
     };
 
-    const handleLocationCreated = (newLocation) => {
-        setLocations(prev => [...prev, newLocation]);
+    const handleLocationCreated = async (newLocation) => {
+        let latestLocationList = await locationService.getLocations();
+        setLocations(latestLocationList);
         setSelectedLocation(newLocation);
-        
+
         // Pan to the new location
         if (map) {
             map.panTo({
@@ -160,7 +161,7 @@ const Map = () => {
             });
             map.setZoom(15); // Zoom in a bit to see the new location better
         }
-        
+
         setToast({
             open: true,
             message: 'Location marker added',
